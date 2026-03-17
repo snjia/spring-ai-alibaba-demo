@@ -24,13 +24,13 @@ public class Demo1 {
 
 
         ToolCallback weatherTool = FunctionToolCallback.builder("get_weather", new WeatherTool())
-                .description("Get weather for a given city")
+                .description("根据城市查询天气")
                 .inputType(String.class)
                 .build();
 
         // 创建 agent
         ReactAgent agent = ReactAgent.builder()
-                .name("weather_agent")
+                .name("天气智能体")
                 .model(chatModel)
                 .tools(weatherTool)
                 .systemPrompt("You are a helpful assistant, 用中文回答")
